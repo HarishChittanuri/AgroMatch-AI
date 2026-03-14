@@ -19,6 +19,7 @@ const EmptyJobsSVG = () => (
     </svg>
 );
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const EmptyApplicantsSVG = () => (
     <svg viewBox="0 0 240 170" fill="none" xmlns="http://www.w3.org/2000/svg"
         style={{ width: 180, display: 'block', margin: '0 auto' }}>

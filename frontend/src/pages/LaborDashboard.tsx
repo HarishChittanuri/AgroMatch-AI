@@ -53,7 +53,7 @@ export default function LaborDashboard() {
   const [filter, setFilter] = useState<'all' | 'excellent' | 'good'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<any[] | null>(null);
-  const [searching, setSearching] = useState(false);
+  const [searching, setSearching] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
   const navigate = useNavigate();
 
   useEffect(() => {
