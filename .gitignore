@@ -1,0 +1,66 @@
+# ── Python / Backend ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables — NEVER commit secrets
+.env
+.env.*
+!.env.example
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.cache/
+*.local
+
+# Frontend env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# ── AI / ML ───────────────────────────────────────────────────────────────────
+# Huggingface model cache (can be huge)
+.cache/huggingface/
+models/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+coverage/
+.pytest_cache/
