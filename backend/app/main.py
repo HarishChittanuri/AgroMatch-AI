@@ -72,12 +72,21 @@ app = FastAPI(
 )
 
 # CORS
+import os as _os
+_frontend_url = _os.getenv("FRONTEND_URL", "")
+_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+if _frontend_url:
+    _origins.append(_frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],  # Your Vite frontend
+    allow_origins=_origins,
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
     expose_headers=["*"],
 )
 
