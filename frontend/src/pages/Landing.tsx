@@ -381,29 +381,6 @@ export default function Landing() {
                 </div>
             </section>
 
-            {/* ── Clients ── */}
-            <section style={{ borderTop: '1px solid #ebebea', borderBottom: '1px solid #ebebea', background: '#fafaf8', padding: '32px 48px' }}>
-                <div style={{ maxWidth: 1400, margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: 13, color: '#bbb', fontWeight: 600, letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 20 }}>Our Valued Partners</p>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: 56, flexWrap: 'wrap', alignItems: 'center' }}>
-                        {['KisanCo', 'HarvestHub', 'AgriLink', 'FarmNet', 'GreenFields', 'CropBridge'].map(name => (
-                            <div key={name} className="grey-logo">◆ {name}</div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Stats ── */}
-            <section style={{ background: '#111', padding: '96px 48px' }}>
-                <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px,1fr))', gap: 40, textAlign: 'center' }}>
-                    {[{ v: '10K+', l: 'Active Users' }, { v: '5K+', l: 'Jobs Filled' }, { v: '95%', l: 'Match Accuracy' }, { v: '< 1h', l: 'Match Time' }].map((s, i) => (
-                        <div key={i} className="reveal">
-                            <div className="serif-upright" style={{ fontSize: 62, fontWeight: 400, color: '#fff', lineHeight: 1, marginBottom: 8 }}>{s.v}</div>
-                            <div style={{ color: '#9ca3af', fontSize: 16, fontWeight: 500 }}>{s.l}</div>
-                        </div>
-                    ))}
-                </div>
-            </section>
 
             {/* ── Testimonials ── */}
             <section id="testimonials" style={{ padding: '104px 48px', background: '#fff' }}>
@@ -455,45 +432,21 @@ export default function Landing() {
             </section>
 
             {/* ── Footer ── */}
-            <footer style={{ background: '#fff', borderTop: '1px solid #ebebea', padding: '64px 48px 32px' }}>
-                <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px,1fr))', gap: 48, marginBottom: 56 }}>
-                        <div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-                                <div style={{ width: 26, height: 26, background: '#111', borderRadius: 7, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>
-                                </div>
-                                <span style={{ fontWeight: 700, fontSize: 16 }}>AgroMatch AI</span>
-                            </div>
-                            <p style={{ fontSize: 14, color: '#999', lineHeight: 1.65 }}>AI-powered agricultural job matching for India.</p>
+            <footer style={{ background: '#fff', borderTop: '1px solid #ebebea', padding: '28px 48px' }}>
+                <div style={{ maxWidth: 1400, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <div style={{ width: 22, height: 22, background: '#111', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" /></svg>
                         </div>
-                        {[
-                            { title: 'Product', links: ['Features', 'How it works', 'Pricing', "What's new"] },
-                            { title: 'Download', links: ['iOS & Android', 'Mac & Windows', 'Web App'] },
-                            { title: 'Policies', links: ['Privacy', 'Terms of use', 'Cookie preferences'] },
-                            { title: 'Support', links: ['Contact us', 'FAQs'] },
-                        ].map(col => (
-                            <div key={col.title}>
-                                <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 16 }}>{col.title}</p>
-                                {col.links.map(l => <a key={l} href="#" className="footer-a">{l}</a>)}
-                            </div>
-                        ))}
-                        <div>
-                            <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 10 }}>Subscribe to our newsletter</p>
-                            <p style={{ fontSize: 13, color: '#999', marginBottom: 12 }}>Get exclusive updates and insider tips.</p>
-                            <div style={{ display: 'flex' }}>
-                                <input placeholder="you@domain.com" style={{ flex: 1, padding: '10px 14px', border: '1px solid #e5e7eb', borderRight: 'none', borderRadius: '8px 0 0 8px', fontSize: 14, outline: 'none', fontFamily: 'inherit' }} />
-                                <button style={{ background: '#111', color: '#fff', border: 'none', padding: '10px 16px', borderRadius: '0 8px 8px 0', fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>Subscribe</button>
-                            </div>
-                        </div>
+                        <span style={{ fontSize: 14, fontWeight: 700 }}>AgroMatch AI</span>
+                        <span style={{ fontSize: 13, color: '#aaa', marginLeft: 4 }}>— © 2026</span>
                     </div>
-                    <div style={{ borderTop: '1px solid #f0f0ec', paddingTop: 22, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-                        <span style={{ fontSize: 14, color: '#ccc' }}>© 2025 AgroMatch AI. Illustrations by AgroMatch.</span>
-                        <div style={{ display: 'flex', gap: 24 }}>
-                            <a href="#" style={{ fontSize: 14, color: '#999', textDecoration: 'none' }}>Privacy</a>
-                            <a href="#" style={{ fontSize: 14, color: '#999', textDecoration: 'none' }}>GitHub</a>
-                        </div>
-                    </div>
+                    <a href="https://github.com/HarishChittanuri/AgroMatch-AI" target="_blank" rel="noopener noreferrer"
+                        style={{ fontSize: 14, color: '#666', textDecoration: 'none', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}
+                        onMouseEnter={e => (e.currentTarget.style.color = '#111')} onMouseLeave={e => (e.currentTarget.style.color = '#666')}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.216.69.825.573C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" /></svg>
+                        View on GitHub
+                    </a>
                 </div>
             </footer>
         </div>
